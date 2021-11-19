@@ -2,14 +2,19 @@
   <h1>{{titulo}}</h1>
   <form>
     <div class="form-group">
-      <label>Operando A</label>
-      <input type="number" class="form-control" placeholder="Escribe operando A" [(ngModel)]="operandoA" name="operandoA" />
+      <label>Numerador</label>
+      <input type="number" class="form-control" placeholder="Escribe operando " [(ngModel)]="operandoA" name="operandoA" />
     </div>
     <div class="form-group">
-      <label>Operando B</label>
-      <input type="number" class="form-control" placeholder="Escribe operando B" [(ngModel)]="operandoB" name="operandoB" />
+      <label>Denominador</label>
+      <input type="number" class="form-control" placeholder="Escribe operando " [(ngModel)]="operandoB" name="operandoB" />
     </div>
-    <button type="submit" class="btn btn-primary" (click)="onSumar()">Sumar</button>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary" (click)="sumar()" style="width:100px; font-weight:bold; font-size:20px">SUMAR</button>
+      <button type="submit" class="btn btn-primary" (click)="restar()" style="width:100px; font-weight:bold; font-size:20px">RESTAR</button>
+      <button type="submit" class="btn btn-primary" (click)="multiplicar()" style="width:150px; font-weight:bold; font-size:20px">MULTIPLICAR</button>
+      <button type="submit" class="btn btn-primary" (click)="dividir()" style="width:100px; font-weight:bold; font-size:20px">DIVIDIR</button>
+  </div>
   </form>
   <p>Resultado: {{resultado}}</p>
 </div>
