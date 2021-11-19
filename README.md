@@ -1,3 +1,11 @@
+![image](https://user-images.githubusercontent.com/72884555/142659638-573c6879-0a7d-4526-abc9-510f994543bc.png)
+
+
+
+
+
+
+
 # CalculadoraApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
