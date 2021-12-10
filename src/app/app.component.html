@@ -1,0 +1,10 @@
+<h1 style="color:rgb(250, 252, 252); background:rgb(118, 163, 14); text-align: center; font-weight:bold; font-size:70px">ES HORA DE JUGAR CON EL DADO</h1>
+
+
+<div class="jumbotron text-center">
+  <button class="btn btn-success btn-lg" (click)="lanzarDados()"> Lanzar Dados</button>
+  <br>
+  <img class="img" [src]="dadoIzquierda">
+  <img class="img" [src]="dadoDerecha">
+  <h1 *ngIf="numero1 === numero2"><span class="badge badge-success"> FELICITACIONES GANASTES </span></h1>
+</div>
