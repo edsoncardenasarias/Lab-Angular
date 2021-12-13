@@ -1,0 +1,44 @@
+<h1 style="color:white; background:rgb(250, 82, 3); text-align: center; font-weight:bold; font-size:70px">Buenas Tardes</h1>
+   <h2 style="color:rgb(7, 7, 7); background:rgb(255, 255, 255); text-align: center; font-weight:bold; font-size:50px">Convierta su Moneda</h2>
+
+   <div class="jumbtrom" style="text-align: center;">
+    <img class="img" src="../assets/img/dolar.png" style="width: 300px; height: 300px;">
+    <img class="img" src="../assets/img/libra.png" style="width: 300px; height: 300px;">
+    <img class="img" src="../assets/img/euros.png" style="width: 300px; height: 300px;">
+  </div>
+
+<div class="container is-max-desktop">
+  <div class="field">
+    <label class="label" style="color:purple; font-weight:bold; font-size:25px">Ingrese Cantidad</label>
+    <div class="control">
+      <input class="input" type="number" (input)="convertir()" [(ngModel)]="cantidad" placeholder="Ingrese Cantidad">
+    </div>
+  </div>
+  <div class="field is-horizontal">
+    <div class="field-body">
+      <div class="field is-expanded">
+        <label class="label" style="color:orange; font-weight:bold; font-size:25px">Tengo</label>
+        <div class="control">
+          <div class="select is-fullwidth">
+            <select [(ngModel)]="tengo" (change)="convertir()">
+              <option [value]="moneda.name" *ngFor="let moneda of monedas">{{ moneda.desc }}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="field is-expanded">
+        <label class="label" style="color:orange; font-weight:bold; font-size:25px">Quiero</label>
+        <div class="control">
+          <div class="select is-fullwidth">
+            <select [(ngModel)]="quiero" (change)="convertir()">
+              <option [value]="moneda.name" *ngFor="let moneda of monedas">{{ moneda.desc }}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <label *ngIf="cantidad > 0" class="label" style="color:rgb(75, 69, 69); font-weight:bold; font-size:50px; text-align: center">{{
+    cantidad }} {{ tengo }} Equivale = {{ total | number: '0.0-2' }} {{ quiero }}</label>
+  <br />
+</div>
